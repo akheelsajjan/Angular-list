@@ -1,0 +1,51 @@
+.nav {
+  background-color: #f3f3f3d3;
+  box-sizing: border-box;
+  display: flex;
+  padding: 10px;
+}
+
+.item {
+  margin: 8px 0px 8px 8px;
+  padding: 10px;
+  width: 15%;
+  letter-spacing: 0.3mm;
+  font-weight: 500;
+  font-size: 5vh;
+  color: rgb(90, 90, 90);
+}
+
+.row:hover {
+  cursor: pointer;
+}
+
+.item:last-of-type {
+  margin: 8px;
+  padding: 0px;
+  width: 32vh;
+  margin-left: auto;
+  width: 80vh;
+}
+
+.bi {
+  -webkit-text-stroke: 1px;
+  margin-left: 4vh;
+}
+
+.savedList {
+  background: #002b42;
+  color: white;
+  font-weight: 500;
+  font-size: 5vh;
+  border-radius: 4%;
+  width: 12%;
+}
+
+.savedListItem {
+  -webkit-text-stroke: 0.04rem;
+  margin-left: 2vh;
+}
+
+.form-control {
+  padding: 8px;
+}

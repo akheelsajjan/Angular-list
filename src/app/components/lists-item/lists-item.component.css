@@ -1,0 +1,22 @@
+.row {
+  width: 100%;
+  margin-left: 2vh;
+  padding: 10px;
+}
+.main {
+  border-bottom: 0.5px gray solid;
+}
+
+.list-date {
+  color: rgb(163, 163, 163);
+  font-weight: 600;
+}
+
+.list-date-text {
+  font-size: smaller;
+}
+
+.list-listName {
+  font-weight: 700;
+  font-size: medium;
+}

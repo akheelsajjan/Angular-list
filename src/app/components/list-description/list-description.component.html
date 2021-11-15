@@ -1,0 +1,23 @@
+<ng-container>
+  <div class="main">
+    <span *ngIf="descriptionText === 'No-Description'">No descrispantion yet</span>&nbsp;
+    <span *ngIf="descriptionText !== 'No-Description'" class="pointer fontcolor" (click)="addDescription()"><b>
+        {{descriptionForm?
+        'Close':'+Add' }} Description</b></span>
+  </div>
+</ng-container>
+
+<ng-container *ngIf='descriptionForm'>
+  <div class="form" *ngIf="descriptionText !== 'No-Description'">
+    <form>
+      <input type="text" name="description" [(ngModel)]='descriptionText' maxlength="40">
+      <button class='pointer' type="button" class="btn btn-light" (click)="save()">Save</button>
+    </form>
+  </div>
+</ng-container>
+
+<ul *ngIf="task" class="descriptionBox">
+  <ng-container *ngFor='let description of task.description'>
+    <li class="description fontcolor">{{ description}}</li>
+  </ng-container>
+</ul>

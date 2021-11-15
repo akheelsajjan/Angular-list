@@ -1,0 +1,76 @@
+<div class="list">
+  <div class="row">
+    <div class="col-1">
+      <span> Date </span>
+    </div>
+    <div class="col-4">
+      List Name
+    </div>
+    <div class="col-2">
+      No of Entities
+    </div>
+    <div class="col-3">
+      Actions
+    </div>
+    <div class="col-2">
+    </div>
+  </div>
+</div>
+
+<!-- <app-lists-item *ngFor='let task of tasks' [task]="task" (taskDetails)='getTaskDetails(task.id)'
+  (click)='highlightRow(task.id)' [ngClass]="{'highlight': task.id === selectedTaskId }">
+</app-lists-item> -->
+
+<ng-container [ngTemplateOutlet]="ApiFail?nolist:list"></ng-container>
+
+<ng-template #list>
+  <div class="main-list" id="mainlist">
+    <div class="main" *ngFor='let task of tasks' (mouseover)='highlightRow(task.id)'
+      [ngClass]="{'highlight': task.id === selectedTaskId }">
+      <div class="row">
+        <div class="item col-1 list-date">
+          <ng-container *ngIf="task.entities">
+            <span class="list-date-text"> {{task.date | date: 'MMM d'}}</span>
+          </ng-container>
+          <ng-container *ngIf="!task.entities">
+            <span><i class="bi bi-alarm"></i> </span>
+          </ng-container>
+        </div>
+        <div class="item col-4">
+          <span class="list-listName" [ngClass]="{'listNameColor': !task.entities}">{{task.listName}}</span>
+        </div>
+        <div class="item col-2">
+          <span class="legalEntities"> {{task.entities}} </span>
+        </div>
+        <div class="item col-3">
+          <div class="actionItems row" [ngClass]="{'actionItemsDisable': task.id !== selectedTaskId }">
+            <div class="col">
+              <span><i class="bi bi-envelope"></i></span>
+            </div>
+            <ng-container *ngIf="task.entities > 0">
+              <div class="col">
+                <span><i class="bi bi-share"></i></span>
+              </div>
+              <div class="col">
+                <span><i class="bi bi-pencil"></i></span>
+              </div>
+              <div class="col">
+                <span><i class="bi bi-trash"></i></span>
+              </div>
+            </ng-container>
+          </div>
+        </div>
+        <div class="item col-2">
+          <button [ngClass]="{'detailButton': task.id === selectedTaskId }" type="button" class="btn detailButton"
+            (click)="getTaskDetails(task.id)">Details</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>
+
+<ng-template #nolist>
+  <div class="apiFail">
+    <h3>API Failure</h3>
+  </div>
+</ng-template>

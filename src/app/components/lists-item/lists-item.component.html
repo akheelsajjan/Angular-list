@@ -1,0 +1,32 @@
+<!-- <div class="main">
+  <div class="row">
+    <div class="item col-1 list-date">
+      <ng-container *ngIf="task.entities">
+        <span class="list-date-text"> {{task.date}}</span>
+      </ng-container>
+      <ng-container *ngIf="!task.entities">
+        <span><i class="bi bi-alarm"></i> </span>
+      </ng-container>
+    </div>
+    <div class="item col-4">
+      <span class="list-listName">{{task.listName}}</span>
+    </div>
+    <div class="item col-2">
+      <span> {{task.entities}} </span>
+    </div>
+    <div class="item col-3">
+      <div class="actionItems">
+        <span><i class="bi bi-envelope"></i></span>
+        <ng-container *ngIf="task.entities > 0">
+          <span><i class="bi bi-share"></i></span>
+          <span><i class="bi bi-pencil"></i></span>
+          <span><i class="bi bi-trash"></i></span>
+        </ng-container>
+      </div>
+    </div>
+    <div class="item col-2">
+      <button type="button" class="btn btn-light" (click)="getDetails(task.id)">Details</button>
+    </div>
+  </div>
+</div> -->
+<ng-content select="selector"></ng-content>

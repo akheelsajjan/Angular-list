@@ -1,0 +1,92 @@
+.row {
+  margin-left: 3vh;
+}
+
+.list {
+  border-bottom: rgb(224, 224, 224) solid;
+  border-bottom-width: thin;
+  padding: 10px;
+  font-weight: 600;
+  color: rgb(131, 131, 131);
+}
+
+.highlight {
+  background-color: lightgray;
+}
+
+.row {
+  width: 100%;
+  margin-left: 4vh;
+  padding: 10px;
+}
+
+.main-list {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  height: 80vh;
+}
+.main {
+  border-bottom: rgb(224, 224, 224) solid;
+  border-bottom-width: thin;
+}
+
+::-webkit-scrollbar {
+  width: 1em !important;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: darkgrey;
+  /* outline: 1px solid slategrey; */
+  border-radius: 12px;
+}
+
+.list-date {
+  color: rgb(163, 163, 163);
+  font-weight: 600;
+}
+
+.list-date-text {
+  font-size: smaller;
+}
+
+.list-listName {
+  font-weight: 550;
+  font-size: medium;
+}
+
+.listNameColor {
+  color: rgb(1, 175, 243);
+}
+
+.legalEntities {
+  margin-left: 8vh;
+}
+
+.actionItems .bi {
+  cursor: pointer;
+}
+
+.actionItemsDisable {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+.btn {
+  width: 10vh;
+}
+.detailButton {
+  background-color: white;
+  border-bottom: rgb(28, 86, 172) solid;
+}
+
+
+.apiFail{
+  display: flex;
+  height: 80vh;
+  justify-content: center;
+  align-items: center;
+  padding:150px ;
+}
